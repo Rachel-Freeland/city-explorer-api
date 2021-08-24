@@ -24,4 +24,4 @@ On 8/24 - Justin Hamerly
 
 ## Web Request Response Cycle
 
-- [lab7_wb.jpg]('images/lab7_wb.jpg')
+- ![lab7_wb.jpg](images/lab7_wb.jpg)
