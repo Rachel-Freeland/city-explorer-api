@@ -64,7 +64,7 @@ class Forecast {
   constructor(obj) {
     this.date = obj.datetime;
     this.description = obj.weather.description;
-    this.dailyForecast = `${obj.datetime}: High ${obj.high_temp}/Low ${obj.low_temp} with ${obj.weather.description}`;
+    this.dailyForecast = `High ${obj.high_temp}/Low ${obj.low_temp} with ${obj.weather.description}`;
   }
 }
 
