@@ -41,7 +41,7 @@ async function getWeather (req, res) {
   try{
   const cityWeather = await axios.get(weatherAPI);
   const cityWeatherStyled = cityWeather.data.data.map( obj => new Forecast(obj));
-  res.send(cityWeatherStyled);
+  res.status(200).send(cityWeatherStyled);
   } catch {
     res.status(500).send('Server Error!');
   }
@@ -53,8 +53,7 @@ async function getMovies (req, res) {
   try{
     const moviesRes = await axios.get(moviesAPI);
     const moviesResData = moviesRes.data.results.map( obj => new MovieInfo(obj));
-    console.log(moviesResData);
-    res.send(moviesResData);
+    res.status(200).send(moviesResData);
   } catch {
     res.status(500).send('Houston, we have an error!');
   }
