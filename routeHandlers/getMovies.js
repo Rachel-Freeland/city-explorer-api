@@ -7,7 +7,8 @@ async function getMovies (req, res) {
     const moviesRes = await axios.get(moviesAPI);
     const moviesResData = moviesRes.data.results.map( obj => new MovieInfo(obj));
     res.status(200).send(moviesResData);
-  } catch {
+  } catch (err) {
+    console.log('err', err)
     res.status(500).send('Houston, we have an problem!');
   }
 }
